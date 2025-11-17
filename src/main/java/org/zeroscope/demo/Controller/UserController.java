@@ -1,20 +1,21 @@
 package org.zeroscope.demo.Controller;
 
-import org.springframework.web.bind.annotation.RequestBody;
-
-// package org.zeroscope.demo.models.User;
-
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PostMapping;
-
 
 @RestController
 @RequestMapping("/service")
 public class UserController {
 
-    @PostMapping
-    
-    
-  public User createUser(@RequestBody User) {}
+  @GetMapping("/")
+  public String getAllUser() {
+    return "Welcome to User Service!";
+  }
+
+  @GetMapping("/user/{id}")
+  public String getUserById(@PathVariable String id) {
+    return "User ID: " + id;
+  }
 }
