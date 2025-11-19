@@ -2,6 +2,7 @@ package org.zeroscope.demo.Controller;
 
 import java.util.List;
 import java.util.Optional;
+import org.antlr.v4.runtime.misc.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.zeroscope.demo.entity.User;
@@ -27,7 +28,7 @@ public class UserController {
     return user.orElse(null); // Returns null if not found
   }
 
-  // Create new user
+  // Create new user11
   @PostMapping("/user")
   public User createUser(@RequestBody User user) {
     return userRepository.save(user);
