@@ -9,7 +9,7 @@ import org.zeroscope.demo.entity.User;
 import org.zeroscope.demo.repository.UserRepository;
 
 @RestController
-@RequestMapping("/service")
+@RequestMapping("/user")
 public class UserController {
 
   @Autowired
