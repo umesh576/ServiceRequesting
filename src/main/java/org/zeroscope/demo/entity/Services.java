@@ -30,4 +30,36 @@ public class Services {
     this.ServiceDecription = ServiceDecription;
     this.ServiceImage = ServiceImage;
   }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getServiceName() {
+    return ServiceName;
+  }
+
+  public String getServiceDescription() {
+    return ServiceDecription;
+  }
+
+  public void setServiceName(String ServiceName) {
+    this.ServiceName = ServiceName;
+  }
+
+  @Override
+  public String toString() {
+    return (
+      "Service Name:{ " +
+      ServiceName +
+      "} " +
+      "Service Decription" +
+      ServiceDecription +
+      "} "
+    );
+  }
 }
