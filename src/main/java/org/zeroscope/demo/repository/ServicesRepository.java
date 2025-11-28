@@ -13,5 +13,5 @@ public interface ServicesRepository extends JpaRepository<Services, Long> {
   List<Services> findAll();
 
   // Or if you want to search by name containing text
-  List<Services> findByServiceNameContaining(String name);
+  List<Services> findByServiceNameContaining(String ServiceName);
 }
