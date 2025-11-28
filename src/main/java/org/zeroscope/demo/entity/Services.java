@@ -10,8 +10,8 @@ public class Services {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
-  @Column(name = "ServiceName", nullable = false)
-  private String ServiceName;
+  @Column(name = "Service_name", nullable = false)
+  private String serviceName;
 
   @Column(name = "ServiceDecription", nullable = false)
   private String ServiceDecription;
@@ -22,11 +22,11 @@ public class Services {
   public Services() {}
 
   public Services(
-    String ServiceName,
+    String serviceName,
     String ServiceDecription,
     String ServiceImage
   ) {
-    this.ServiceName = ServiceName;
+    this.serviceName = serviceName;
     this.ServiceDecription = ServiceDecription;
     this.ServiceImage = ServiceImage;
   }
@@ -40,7 +40,7 @@ public class Services {
   }
 
   public String getServiceName() {
-    return ServiceName;
+    return serviceName;
   }
 
   public String getServiceDescription() {
@@ -48,14 +48,14 @@ public class Services {
   }
 
   public void setServiceName(String ServiceName) {
-    this.ServiceName = ServiceName;
+    this.serviceName = ServiceName;
   }
 
   @Override
   public String toString() {
     return (
       "Service Name:{ " +
-      ServiceName +
+      serviceName +
       "} " +
       "Service Decription" +
       ServiceDecription +
