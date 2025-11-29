@@ -29,7 +29,7 @@ public class UserController {
   }
 
   // Create new user11
-  @PostMapping("/user")
+  @PostMapping("/create")
   public User createUser(@RequestBody User user) {
     return userRepository.save(user);
   }
